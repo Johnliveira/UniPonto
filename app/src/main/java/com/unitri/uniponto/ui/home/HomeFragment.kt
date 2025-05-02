@@ -35,7 +35,7 @@ class HomeFragment : Fragment() {
 
         homeViewModel.text.observe(viewLifecycleOwner) {
             hour.text = clock.getHour().toString()
-            minute.text = clock.getMinute().toString()
+            minute.text = clock.getMinute()
         }
         return root
     }
