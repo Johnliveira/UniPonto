@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.unitri.uniponto.databinding.FragmentHomeBinding
+import com.unitri.uniponto.util.Clock
 
 class HomeFragment : Fragment() {
 
@@ -28,9 +29,13 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textHome
+        val clock = Clock()
+        val hour: TextView = binding.clockHour
+        val minute: TextView = binding.clockMinute
+
         homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+            hour.text = clock.getHour().toString()
+            minute.text = clock.getMinute().toString()
         }
         return root
     }

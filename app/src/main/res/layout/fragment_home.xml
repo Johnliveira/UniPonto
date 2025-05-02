@@ -7,17 +7,219 @@
     android:background="@color/black"
     tools:context=".ui.home.HomeFragment">
 
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="198dp"
+        android:layout_height="208dp"
+        android:layout_marginBottom="116dp"
+        android:src="@drawable/biometria_img"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:src="@drawable/biometria_img" />
+
     <TextView
-        android:id="@+id/text_home"
+        android:id="@+id/page_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
+        android:text="@string/ponto"
         android:textAlignment="center"
-        android:textSize="20sp"
+        android:textColor="#FFFFFF"
+        android:textSize="44sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.083" />
+
+    <TextView
+        android:id="@+id/clock_minute"
+        android:layout_width="108dp"
+        android:layout_height="67dp"
+        android:background="#363E31"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="#EAF8E9"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/page_title"
+        app:layout_constraintVertical_bias="0.057" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="22dp"
+        android:layout_height="76dp"
+        android:text=":"
+        android:textAlignment="center"
+        android:textColor="#FFFDFD"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/page_title"
+        app:layout_constraintVertical_bias="0.058" />
+
+    <TextView
+        android:id="@+id/clock_hour"
+        android:layout_width="103dp"
+        android:layout_height="67dp"
+        android:background="#3F5B11"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="#BCEF9F"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/page_title"
+        app:layout_constraintVertical_bias="0.057" />
+
+    <TextView
+        android:id="@+id/saida"
+        android:layout_width="61dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="432dp"
+        android:background="#3C4038"
+        android:text="17:00"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/almocoOut" />
+
+    <TextView
+        android:id="@+id/almocoOut"
+        android:layout_width="61dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="432dp"
+        android:background="#3C4038"
+        android:text="12:30"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/almocoIn" />
+
+    <TextView
+        android:id="@+id/entrada"
+        android:layout_width="61dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="432dp"
+        android:background="#3C4038"
+        android:text="8:00"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/entradaText4"
+        android:layout_width="59dp"
+        android:layout_height="19dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="24dp"
+        android:text="Saída"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/saida"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/entradaText"
+        android:layout_width="59dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="24dp"
+        android:text="Entrada"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/entrada"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/entradaText3"
+        android:layout_width="59dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginBottom="24dp"
+        android:text="Almoço"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/almocoIn"
+        app:layout_constraintEnd_toStartOf="@+id/entradaText4"
+        app:layout_constraintHorizontal_bias="0.818"
+        app:layout_constraintStart_toEndOf="@+id/entradaText" />
+
+    <TextView
+        android:id="@+id/almocoIn"
+        android:layout_width="61dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="432dp"
+        android:background="#3C4038"
+        android:text="11:30"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/entrada" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="56dp"
+        android:layout_height="63dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/in"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/entrada" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="55dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="353dp"
+        android:src="@drawable/out"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/saida" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="79dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="363dp"
+        android:src="@drawable/garfoecolher"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/imageView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
