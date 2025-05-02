@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
@@ -13,7 +12,8 @@ import com.unitri.uniponto.util.Clock
 import com.unitri.uniponto.util.RegisterOrder
 import com.unitri.uniponto.util.RegisterTime
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.Date
+import java.util.Locale
 
 class HomeFragment : Fragment() {
 
@@ -57,28 +57,45 @@ class HomeFragment : Fragment() {
                     registerTimes.add(RegisterTime(RegisterOrder.ENTRY, currentTime))
                     binding.entryTime.text = currentTime
                     binding.entryTime.visibility = View.VISIBLE
-                    Toast.makeText(requireContext(), "Entrada registrada", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), "Entrada registrada", Toast.LENGTH_SHORT)
+                        .show()
                 }
+
                 1 -> {
                     registerTimes.add(RegisterTime(RegisterOrder.GO_LUNCH, currentTime))
                     binding.goLunchTime.text = currentTime
                     binding.goLunchTime.visibility = View.VISIBLE
-                    Toast.makeText(requireContext(), "Saída para almoço registrada", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        requireContext(),
+                        "Saída para almoço registrada",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
+
                 2 -> {
                     registerTimes.add(RegisterTime(RegisterOrder.BACK_LUNCH, currentTime))
                     binding.backLunchTime.text = currentTime
                     binding.backLunchTime.visibility = View.VISIBLE
-                    Toast.makeText(requireContext(), "Retorno do almoço registrado", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        requireContext(),
+                        "Retorno do almoço registrado",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
+
                 3 -> {
                     registerTimes.add(RegisterTime(RegisterOrder.EXIT, currentTime))
                     binding.exitTime.text = currentTime
                     binding.exitTime.visibility = View.VISIBLE
                     Toast.makeText(requireContext(), "Saída registrada", Toast.LENGTH_SHORT).show()
                 }
+
                 else -> {
-                    Toast.makeText(requireContext(), "Todos os registros já foram feitos", Toast.LENGTH_LONG).show()
+                    Toast.makeText(
+                        requireContext(),
+                        "Todos os registros já foram feitos",
+                        Toast.LENGTH_LONG
+                    ).show()
                 }
             }
 
@@ -92,18 +109,21 @@ class HomeFragment : Fragment() {
         val order = registerTime.order
 
         when (order) {
-            RegisterOrder.ENTRY ->  {
+            RegisterOrder.ENTRY -> {
                 binding.entryTime.visibility = View.VISIBLE
                 binding.entryTime.text = registerTime.value
             }
+
             RegisterOrder.GO_LUNCH -> {
                 binding.goLunchTime.visibility = View.VISIBLE
                 binding.goLunchTime.text = registerTime.value
             }
+
             RegisterOrder.BACK_LUNCH -> {
                 binding.backLunchTime.visibility = View.VISIBLE
                 binding.backLunchTime.text = registerTime.value
             }
+
             RegisterOrder.EXIT -> {
                 binding.exitTime.visibility = View.VISIBLE
                 binding.exitTime.text = registerTime.value

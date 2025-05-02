@@ -24,7 +24,8 @@ class MainActivity : AppCompatActivity() {
             if (destination.id == R.id.loginFragment) {
                 navView.visibility = View.GONE
             } else {
-                navController.graph = navController.navInflater.inflate(R.navigation.mobile_navigation)
+                navController.graph =
+                    navController.navInflater.inflate(R.navigation.mobile_navigation)
                 navView.setupWithNavController(navController)
                 navView.visibility = View.VISIBLE
             }

@@ -28,7 +28,11 @@ class LoginFragment : Fragment() {
             val password = passwordEditText.text.toString()
 
             if (email.isEmpty() || password.isEmpty()) {
-                Toast.makeText(requireContext(), "Preencha todos os campos", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Preencha todos os campos", Toast.LENGTH_SHORT)
+                    .show()
+            } else if (email != "lucas.molodoy@unitri.edu.br" && password != "admin") {
+                Toast.makeText(requireContext(), "Email ou senha inválidos", Toast.LENGTH_SHORT)
+                    .show()
             } else {
                 findNavController().navigate(R.id.action_login_to_main)
             }
