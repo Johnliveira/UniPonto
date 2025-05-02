@@ -78,12 +78,12 @@
         android:layout_width="59dp"
         android:layout_height="19dp"
         android:layout_marginStart="40dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="485dp"
         android:text="Entrada"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/entryTime"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
@@ -93,11 +93,11 @@
         android:layout_marginStart="40dp"
         android:layout_marginBottom="432dp"
         android:background="#3C4038"
-        android:text="8:00"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -106,56 +106,53 @@
         android:layout_width="56dp"
         android:layout_height="63dp"
         android:layout_marginStart="45dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginBottom="353dp"
         android:src="@drawable/in"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/entryTime" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/lunchText"
         android:layout_width="59dp"
         android:layout_height="19dp"
-        android:layout_marginStart="75dp"
-        android:layout_marginEnd="72dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginStart="183dp"
+        android:layout_marginBottom="485dp"
         android:text="Almoço"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/goLunchTime"
-        app:layout_constraintEnd_toStartOf="@+id/exitText"
-        app:layout_constraintHorizontal_bias="0.818"
-        app:layout_constraintStart_toEndOf="@+id/entryText" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/goLunchTime"
         android:layout_width="61dp"
         android:layout_height="29dp"
-        android:layout_marginStart="48dp"
+        android:layout_marginStart="149dp"
         android:layout_marginBottom="432dp"
         android:background="#3C4038"
-        android:text="11:30"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/entryTime" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/returnLunchTime"
         android:layout_width="61dp"
         android:layout_height="29dp"
-        android:layout_marginStart="12dp"
+        android:layout_marginEnd="128dp"
         android:layout_marginBottom="432dp"
         android:background="#3C4038"
-        android:text="12:30"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/goLunchTime" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
         android:id="@+id/lunchImage"
@@ -173,42 +170,38 @@
         android:layout_width="59dp"
         android:layout_height="19dp"
         android:layout_marginEnd="36dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="485dp"
         android:text="Saída"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/exitTime"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/exitTime"
         android:layout_width="61dp"
         android:layout_height="29dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginEnd="43dp"
+        android:layout_marginEnd="38dp"
         android:layout_marginBottom="432dp"
         android:background="#3C4038"
-        android:text="17:00"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/returnLunchTime" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
         android:id="@+id/exitImage"
         android:layout_width="55dp"
         android:layout_height="63dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="38dp"
         android:layout_marginBottom="353dp"
         android:src="@drawable/out"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/exitTime" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageButton
         android:id="@+id/registerButton"
