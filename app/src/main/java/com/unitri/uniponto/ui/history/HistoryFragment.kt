@@ -4,39 +4,43 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
-import com.unitri.uniponto.databinding.FragmentHistoryBinding
+import androidx.recyclerview.widget.RecyclerView
+import com.unitri.uniponto.R
+import com.unitri.uniponto.util.HistoryAdapter
+import com.unitri.uniponto.util.HistoryItem
 
 class HistoryFragment : Fragment() {
 
-    private var _binding: FragmentHistoryBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
+    private lateinit var recyclerView: RecyclerView
+    private lateinit var adapter: HistoryAdapter
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        val historyViewModel =
-            ViewModelProvider(this).get(HistoryViewModel::class.java)
-
-        _binding = FragmentHistoryBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-
-        val textView: TextView = binding.textHistory
-        historyViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
-        return root
+    ): View? {
+        return inflater.inflate(R.layout.fragment_history, container, false)
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        recyclerView = view.findViewById(R.id.historyRecyclerView)
+
+        val mockData = listOf(
+            HistoryItem("27/12/2024", "8:20", "11:31 - 12:31", "17:20"),
+            HistoryItem("28/12/2024", "8:00", "11:31 - 12:30", "17:00"),
+            HistoryItem("29/12/2024", "8:15", "11:30 - 12:30", "17:15"),
+            HistoryItem("30/12/2024", "8:20", "11:31 - 12:31", "17:20"),
+            HistoryItem("30/12/2024", "8:20", "11:31 - 12:31", "17:20"),
+            HistoryItem("30/12/2024", "8:20", "11:31 - 12:31", "17:20"),
+            HistoryItem("30/12/2024", "8:20", "11:31 - 12:31", "17:20"),
+            HistoryItem("30/12/2024", "8:20", "11:31 - 12:31", "17:20"),
+            HistoryItem("30/12/2024", "8:20", "11:31 - 12:31", "17:20"),
+            HistoryItem("02/01/2025", "8:20", "11:31 - 12:31", "17:20")
+        )
+
+        adapter = HistoryAdapter(mockData)
+        recyclerView.adapter = adapter
     }
 }
