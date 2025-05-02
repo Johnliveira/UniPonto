@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#101510"
+    android:layout_marginBottom="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="27/12/2024"
+        android:textColor="#C9DDC3"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/entryTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Entrada: 8:20"
+        android:textColor="#C9DDC3"
+        android:textSize="14sp"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:id="@+id/lunchTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Almoço: 11:31 - 12:31"
+        android:textColor="#C9DDC3"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/exitTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Saída: 17:20"
+        android:textColor="#C9DDC3"
+        android:textSize="14sp"/>
+</LinearLayout>

@@ -12,9 +12,6 @@ import com.unitri.uniponto.databinding.FragmentProfileBinding
 class ProfileFragment : Fragment() {
 
     private var _binding: FragmentProfileBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -22,15 +19,19 @@ class ProfileFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val ProfileViewModel =
-            ViewModelProvider(this).get(ProfileViewModel::class.java)
+        val profileViewModel = ViewModelProvider(this).get(ProfileViewModel::class.java)
 
         _binding = FragmentProfileBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
         val textView: TextView = binding.textProfile
-        ProfileViewModel.text.observe(viewLifecycleOwner) {
+        profileViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
+        }
+
+        val logoutButton = binding.logoutButton
+        logoutButton.setOnClickListener {
+            requireActivity().finishAffinity()
         }
         return root
     }
