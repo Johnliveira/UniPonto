@@ -140,7 +140,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/returnLunchTime"
+        android:id="@+id/backLunchTime"
         android:layout_width="61dp"
         android:layout_height="29dp"
         android:layout_marginEnd="128dp"
